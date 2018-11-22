@@ -1,0 +1,20 @@
+{
+  "name": "zjl",
+  "version": "0.1.0",
+  "description": "20181120",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "devDependencies":{
+    "babel-core":"^6.26.3",
+    "babel-loader":"7",
+    "babel-preset-env":"^1.7.0",
+    "webpack":"^4.20.2",
+    "webpack-cli":"^3.1.2",
+    "webpack-dev-server":"^3.1.9"
+  },
+  "keywords": [],
+  "author": "YanTing <1178170499@qq.com> (https://github.com/YanTing1111)",
+  "license": "ISC"
+}
