@@ -11,5 +11,6 @@ webpack-cli 负责接受任务，进行编译或dev
 react相比于小程序，
 相同之处：在MVVM上是一样的，小程序是抄的react
 不同之处：react组件开发思想更加的专业
-#容器组件 eg:FormComponent   容器型组件
-                -InputComponent  表现式组件
+#容器组件 
+#eg:FormComponent   容器型组件
+#      -InputComponent  表现式组件
