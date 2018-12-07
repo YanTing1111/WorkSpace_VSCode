@@ -27,7 +27,12 @@ class Sidebar extends Component{
                     }>
                     {
                         item.children && item.children.map(menuItem => (
-                            <Item Key={menuItem.key}>
+                            <Item Key={menuItem.key} onClick={() => {
+                                this.setState({
+                                    selectedKeys: [menuItem.key]
+                                });
+                                document.title = menuItem.text;
+                            }}>
                                 <Link to={menuItem.path}>
                                     {menuItem.text}
                                 </Link>
@@ -43,11 +48,17 @@ class Sidebar extends Component{
                     theme="dark" 
                     openKeys={openKeys}
                     selectedKeys={selectedKeys}
-                    mode="inline">
+                    mode="inline"
+                    onOpenChange={this.OpenChange}>
                     {SideTree}
                 </Menu>
             </Sider>
         )
+    }
+    OpenChange = (openKeys) => {
+        this.setState({
+            openKeys
+        })
     }
 }
 
