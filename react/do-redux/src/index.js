@@ -77,3 +77,4 @@ function renderApp(store) {
 renderApp(store);
 dispatch({type: "BODY_TEXT", text: "我是调用dispatch修改的body"});
 console.log(store);
+renderApp(store);
