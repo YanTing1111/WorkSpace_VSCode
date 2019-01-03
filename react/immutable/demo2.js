@@ -2,6 +2,8 @@
 var arr = ["old", 1, true, null, undefined];
 var new_arr = arr.slice();//浅拷贝
 // var new_arr = arr.concat();//浅拷贝
+//slice和concat是数组里面少数返回新数组的方法，这两个方法也称为浅拷贝
+
 // var new_arr = arr 
 // 如果arr或new_arr一方修改，未来就不可知了，所以不要用
 // 用Immutable（不可变数据），外界无法修改它，
