@@ -19,5 +19,9 @@
   - webpack-dev-server port  启动端口
   - html-plugin 启动src/index.html  template
 5. .babelrc 做js编译
-6. 
+6. typescript 在react中做加法，让项目强类型化，减少错误。
+  - members 类型定义MemberEntity[]  => members: MemberEntity[]
+    在所有生命周期之中请求， api方法返回值类型 interface
+  - model 层 
+  - api 层
 

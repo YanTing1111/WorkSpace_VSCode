@@ -1,10 +1,71 @@
 import * as React from 'react';
+import { MemberEntity } from '../../model';
+import { memberAPI } from '../../api/member';
+import { members } from '../../api/member/mockData';
 
-// React.StatelessComponent 里面没有state
-export const MemberPage: React.StatelessComponent<{}> = () => {
+// 对自身状态的约束
+interface State {
+  members: MemberEntity[]
+}
+// 对外界传来的props的约束
+interface Props {
+}
+
+export class MembersPage extends React.Component<Props, State> {
+  constructor (props) {
+    super(props);
+    this.state = {
+      members: []
+    }
+  }
+  public componentDidMount () {
+    memberAPI.fetchMembers()
+      .then(members => {
+        this.setState({
+          members
+        })
+      })
+  }
+
+  public render () {
+    return (
+      <div className="row">
+        <h2>Members Page</h2>
+        <table className="table">
+          <thead>
+          { MemberHeader() }
+          </thead>
+          <tbody>
+          { this.state.members.map(MemberRow)}
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+}
+
+const MemberHeader = () => {
   return (
-    <div className="row">
-      <h2>Members Page!</h2>
-    </div>
+    <tr>
+      <td>Avatar</td>
+      <td>Id</td>
+      <td>Name</td>
+    </tr>
+  )
+}
+
+const MemberRow = (member: MemberEntity) => {
+  return (
+    <tr key={member.id}>
+      <td>
+        <img src={member.avatar_url} className="avatar" />
+      </td>
+      <td>
+        <span>{member.id}</span>
+      </td>
+      <td>
+        <span>{member.login}</span>
+      </td>
+    </tr>
   )
 }
