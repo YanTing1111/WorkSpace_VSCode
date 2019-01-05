@@ -15,6 +15,11 @@ module.exports = {
    vendorStyles: [
      '../node_modules/bootstrap/dist/css/bootstrap.css',
    ],
+   vendor: [
+     'react',
+     'react-dom',
+     'react-router-dom'
+   ]
  },
  output: {
    path: path.join(basePath, 'dist'),
