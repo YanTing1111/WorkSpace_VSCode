@@ -24,4 +24,6 @@
     在所有生命周期之中请求， api方法返回值类型 interface
   - model 层 
   - api 层
+7. common -> input,button => form => page(redux state) => pageContainer
+
 

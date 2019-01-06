@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { App } from './app';
-import { About, MembersPage } from './components';
+import { About, MembersPage, MemberPageContainer } from './components';
 
 // StatelessComponent 没有自身状态的，由prop来驱动的
 export const AppRouter: React.StatelessComponent<{}> = () => {
@@ -12,7 +12,8 @@ export const AppRouter: React.StatelessComponent<{}> = () => {
         <Switch>
           <Route exact path='/' component={About} />
           <Route path='/about' component={About} />
-          <Route exact path='/members' component={MembersPage} />
+          <Route path='/members' component={MembersPage} />
+          <Route path='/member' component={MemberPageContainer} />
         </Switch>
       </div>
     </HashRouter>
