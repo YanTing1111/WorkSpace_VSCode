@@ -67,10 +67,10 @@ var now = Date.now();
   let i = 0;
   for(let p of pets) {
     console.log(JSON.stringify(p));
-    // p.gender = true;
-    // p.updatedAt = Date.now();
-    // p.version++;
-    // await p.save();
+    p.gender = true;
+    p.updatedAt = Date.now();
+    p.version++;
+    await p.save();
 
     if(i !== 0){
       await p.destroy();
