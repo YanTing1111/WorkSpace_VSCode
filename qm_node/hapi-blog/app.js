@@ -2,6 +2,7 @@ const Hapi = require('hapi');
 const routesBlogs = require('./routes/blogs'); 
 const pluginHapiSwagger = require('./plugins/hapi-swagger');
 const pluginHapiPagination = require('./plugins/hapi-pagination');
+const pluginHapiRedis = require('./plugins/hapi-redis');
 require('env2')('./.env');
 const { env } = process;
 
@@ -14,7 +15,8 @@ server.connection({
 const start = async () => {
   await server.register([
     ...pluginHapiSwagger,
-    pluginHapiPagination
+    pluginHapiPagination,
+    pluginHapiRedis
   ]);
   server.route([
     ...routesBlogs
