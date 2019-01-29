@@ -1,0 +1,19 @@
+{
+  "name": "mysql_seq",
+  "version": "0.1.0",
+  "description": "yarn add env2 mysql2 sequelize sequelize-cli\r # 将配置放在.env文件里,该文件绝对不能上传到github上,记得将其添加到.gitignore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "YanTing <1178170499@qq.com> (https://github.com/YanTing1111)",
+  "license": "ISC",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  },
+  "devDependencies": {}
+}
